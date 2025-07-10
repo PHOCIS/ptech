@@ -1,0 +1,98 @@
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(#111111, #000000);
+  color: #FFFFFF;
+  overflow-x: hidden;
+}
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #000000;
+  z-index: 1000;
+}
+.logo {
+  max-height: 40px;
+}
+.nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.cta-button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #39FF14;
+  background: transparent;
+  color: #39FF14;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 2rem;
+}
+h1 {
+  font-size: 2.5rem;
+  max-width: 800px;
+}
+.highlight {
+  color: #39FF14;
+}
+p {
+  max-width: 600px;
+  margin-top: 1rem;
+}
+.choices h2 {
+  margin-top: 4rem;
+  font-size: 1.8rem;
+}
+.cards {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #39FF14;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #66ff66;
+}
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-slide {
+  animation: fadeSlide 1s ease-out both;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .cards {
+    flex-direction: column;
+  }
+}
